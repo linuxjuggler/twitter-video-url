@@ -9,4 +9,4 @@ fi
 
 trimmedURL=$(echo "$url" | tr -d '\n')
 
-youtube-dl $trimmedURL --no-warnings --quiet -o -
+youtube-dl -g --no-warnings --quiet --simulate --get-url -o '%(url)s' --hls-prefer-ffmpeg $trimmedURL

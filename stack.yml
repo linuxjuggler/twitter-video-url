@@ -4,8 +4,10 @@ provider:
   gateway: http://localhost:8080
 
 functions:
-  youtubedl:
+  twitter-video-url:
     lang: Dockerfile
     handler: ./
-    image: alexellis2/faas-youtubedl:0.3
+    image: zaherg/faas-twitter-video-url:0.1
+    environment:
+      content_type: text/html
 

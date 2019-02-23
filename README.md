@@ -1,9 +1,9 @@
-# youtube-dl
-YouTube download via a function
+# twitter-video-url
+Twitter video url retriever via a function
 
 ```
-$ git clone https://github.com/faas-and-furious/youtube-dl \
-  cd youtube-dl
+$ git clone https://github.com/linuxjuggler/twitter-video-url \
+  cd twitter-video-url
 ```
 
 Now deploy:
@@ -16,7 +16,7 @@ The YAML file is optional:
 
 ```
 $ faas-cli deploy -f \
-https://raw.githubusercontent.com/faas-and-furious/youtube-dl/master/stack.yml
+https://raw.githubusercontent.com/linuxjuggler/twitter-video-url/master/stack.yml
 ```
 
 Or from the local file:
@@ -28,13 +28,13 @@ $ faas-cli deploy
 Try it out:
 
 ```
-$ echo -n https://www.youtube.com/watch?v=nG2rNBFzkGE | \
-  faas-cli invoke youtubedl > cat_jump.mov
+$ echo -n https://twitter.com/RavenTest/status/1053357651101470729 | \
+  faas-cli invoke twitter-video-url
 ```
 
 Or with `curl`:
 
 ```
-$ curl localhost:8080/function/youtubedl \
- -d "https://www.youtube.com/watch?v=BJDJFMlvV_8" > cat_purr.mov
+$ curl localhost:8080/function/twitter-video-url \
+ -d "https://twitter.com/RavenTest/status/1053357651101470729"
 ```
