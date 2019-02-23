@@ -38,3 +38,8 @@ Or with `curl`:
 $ curl localhost:8080/function/twitter-video-url \
  -d "https://twitter.com/RavenTest/status/1053357651101470729"
 ```
+
+
+## Credits
+
+This image has been modified and built based on the code from [faas-and-furious/youtube-dl](https://github.com/faas-and-furious/youtube-dl)
